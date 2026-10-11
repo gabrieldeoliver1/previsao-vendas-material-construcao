@@ -1,0 +1,49 @@
+name: Atualização automática
+
+on:
+  schedule:
+    - cron: "0 12 * * 1"   # Toda segunda-feira, às 9h de Brasília
+  workflow_dispatch:
+    inputs:
+      forcar:
+        description: "Refazer a previsão mesmo sem mês novo"
+        type: boolean
+        default: false
+  push:
+    paths:
+      - "pipeline/**"
+      - ".github/workflows/atualizar.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  atualizar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+      - name: Instalar dependências
+        run: pip install -r requirements.txt
+      - name: Coletar, validar e prever
+        id: pipeline
+        continue-on-error: true
+        run: python -m pipeline.atualizar ${{ inputs.forcar && '--forcar' || '' }}
+      - name: Salvar os resultados no repositório
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data docs README.md
+          if git diff --cached --quiet; then
+            echo "Nada a salvar."
+          else
+            git commit -m "Atualização automática: $(date -u +%Y-%m-%d)"
+            git push
+          fi
+      - name: Falhar se o pipeline falhou
+        if: steps.pipeline.outcome == 'failure'
+        run: exit 1
