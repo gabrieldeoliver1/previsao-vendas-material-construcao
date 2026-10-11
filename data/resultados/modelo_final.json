@@ -1,0 +1,17 @@
+{
+  "ordem": [
+    1,
+    1,
+    0
+  ],
+  "ordem_sazonal": [
+    1,
+    1,
+    1,
+    12
+  ],
+  "aic": -879.7,
+  "ultimo_mes": "2026-07-01",
+  "efeito_dia_util_%": 3.2,
+  "efeito_sabado_%": 1.49
+}
