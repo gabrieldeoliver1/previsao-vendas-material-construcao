@@ -3,6 +3,7 @@
 Os códigos da tabela mudam pouco, mas não são óbvios. Por isso, em vez de fixar códigos,
 o script consulta os metadados da tabela e encontra as variáveis e categorias pelo nome.
 """
+import gzip
 import json
 import urllib.request
 
@@ -23,7 +24,10 @@ def baixar_json(url, tentativas=3):
         try:
             requisicao = urllib.request.Request(url, headers={"User-Agent": "pipeline-previsao-vendas"})
             with urllib.request.urlopen(requisicao, timeout=120) as resposta:
-                return json.loads(resposta.read().decode("utf-8"))
+                conteudo = resposta.read()
+            if conteudo[:2] == b"\x1f\x8b":  # A API do IBGE pode responder com o conteúdo compactado (gzip)
+                conteudo = gzip.decompress(conteudo)
+            return json.loads(conteudo.decode("utf-8"))
         except Exception as erro:  # noqa: BLE001 - qualquer falha de rede é tentada de novo
             ultimo_erro = erro
     raise RuntimeError(f"Falha ao acessar {url}: {ultimo_erro}")
