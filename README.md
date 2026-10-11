@@ -16,7 +16,10 @@
 ## 📅 Situação atual
 
 <!-- INICIO_ATUALIZACAO -->
-- Esta seção é preenchida automaticamente na primeira execução do pipeline.
+- **Última verificação:** 11/10/2026
+- **Último mês publicado pelo IBGE:** jul/2026 (índice 107,0)
+- **Previsão para ago/2026:** 103,3 (intervalo de 95%: 94,7 a 112,8)
+- **Erro médio do modelo na validação (MAPE):** 3,37%
 <!-- FIM_ATUALIZACAO -->
 
 ## Problema de negócio

@@ -1,6 +1,7 @@
 {
-  "situacao": "erro",
-  "etapa": "coleta e validação",
-  "erro": "Falha ao acessar https://servicodados.ibge.gov.br/api/v3/agregados/8883/metadados: 'utf-8' codec can't decode byte 0x8b in position 1: invalid start byte",
-  "executado_em": "2026-10-11T15:18:45+00:00"
+  "situacao": "atualizado",
+  "ultimo_mes": "2026-07-01",
+  "meses": 283,
+  "mes_novo": false,
+  "executado_em": "2026-10-11T15:27:16+00:00"
 }

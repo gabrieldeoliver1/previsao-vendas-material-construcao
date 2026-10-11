@@ -1,7 +1,7 @@
 modelo,MAPE,RMSE,MAPE_desvio,ganho_vs_linha_de_base_%
-SARIMA,3.37,4.3,0.66,24.94
-Combinação (média dos 3 modelos),3.4,4.48,1.2,24.22
+SARIMA,3.37,4.3,0.66,24.93
+Combinação (média dos 3 modelos),3.4,4.48,1.2,24.21
 Holt-Winters,3.61,4.48,0.54,19.55
-SARIMA sem calendário,3.66,4.57,0.57,18.47
+SARIMA sem calendário,3.65,4.57,0.57,18.59
 Sazonal ingênuo (linha de base),4.48,5.66,1.32,0.0
 LightGBM,5.61,6.93,1.54,-25.17
