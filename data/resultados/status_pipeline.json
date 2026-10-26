@@ -1,7 +1,6 @@
 {
-  "situacao": "atualizado",
-  "ultimo_mes": "2026-08-01",
-  "meses": 284,
-  "mes_novo": true,
-  "executado_em": "2026-10-19T17:59:59+00:00"
+  "situacao": "erro",
+  "etapa": "coleta e validação",
+  "erro": "Falha ao acessar https://servicodados.ibge.gov.br/api/v3/agregados/8883/metadados: <urlopen error timed out>",
+  "executado_em": "2026-10-26T17:57:50+00:00"
 }
