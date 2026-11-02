@@ -2,5 +2,5 @@
   "situacao": "erro",
   "etapa": "coleta e validação",
   "erro": "Falha ao acessar https://servicodados.ibge.gov.br/api/v3/agregados/8883/metadados: <urlopen error timed out>",
-  "executado_em": "2026-10-26T17:57:50+00:00"
+  "executado_em": "2026-11-02T21:06:43+00:00"
 }
