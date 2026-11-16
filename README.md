@@ -16,11 +16,11 @@
 ## 📅 Situação atual
 
 <!-- INICIO_ATUALIZACAO -->
-- **Última verificação:** 19/10/2026
-- **Último mês publicado pelo IBGE:** ago/2026 (índice 101,0)
-- **Previsão para set/2026:** 102,6 (intervalo de 95%: 94,0 a 112,0)
-- **Erro médio do modelo na validação (MAPE):** 4,44%
-- **Previsão anterior para ago/2026:** 103,3; valor real: 101,0 (erro de 2,3%, dentro do intervalo de 95%)
+- **Última verificação:** 16/11/2026
+- **Último mês publicado pelo IBGE:** set/2026 (índice 101,5)
+- **Previsão para out/2026:** 105,1 (intervalo de 95%: 96,3 a 114,7)
+- **Erro médio do modelo na validação (MAPE):** 5,01%
+- **Previsão anterior para set/2026:** 102,6; valor real: 101,5 (erro de 1,1%, dentro do intervalo de 95%)
 <!-- FIM_ATUALIZACAO -->
 
 ## Problema de negócio
